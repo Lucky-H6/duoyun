@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+    发布者中心
+{% endblock %}
+
+{% block middle %}
+    <br/>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-my-task-list" data-toggle="list"
+                       href="#list-my-task" role="tab" aria-controls="my-task">我的任务</a>
+                    <a class="list-group-item list-group-item-action" id="list-post-task-list" data-toggle="list"
+                       href="#list-post-task" role="tab" aria-controls="post-task">我要发布</a>
+                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
+                       href="" role="tab" aria-controls="messages">我的账单</a>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-my-task" role="tabpanel"
+                         aria-labelledby="list-my-task-list">
+                        <!-- !TODO -->
+                        我的任务
+                    </div>
+                    <div class="tab-pane fade" id="list-post-task" role="tabpanel" aria-labelledby="list-post-task-list">
+                        <!-- !TODO -->
+                        我要发布
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

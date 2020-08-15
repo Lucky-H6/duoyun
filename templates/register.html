@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}
+    注册
+{% endblock %}
+
+{% block middle %}
+    <br/><br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-user-tab" data-toggle="tab" href="#nav-user"
+                           role="tab"
+                           aria-controls="nav-user" aria-selected="true">注册成为普通用户</a>
+                        <a class="nav-item nav-link" id="nav-publisher-tab" data-toggle="tab" href="#nav-publisher"
+                           role="tab"
+                           aria-controls="nav-publisher" aria-selected="false">注册成为发布者</a>
+                    </div>
+                </nav>
+                <br/>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-user" role="tabpanel" aria-labelledby="nav-user-tab">
+                        <form>
+                            <div class="form-group">
+                                <label for="user_username">用户id</label>
+                                <input type="text" class="form-control" id="user_username" placeholder="请输入用户id">
+                            </div>
+                            <div class="form-group">
+                                <label for="user_password">密码</label>
+                                <input type="password" class="form-control" id="user_password" placeholder="请输入密码">
+                            </div>
+                            <div class="form-group">
+                                <label for="user_re_password">确认密码</label>
+                                <input type="password" class="form-control" id="user_re_password" placeholder="请再次输入密码">
+                            </div>
+                            <button type="submit" class="btn btn-primary">点击注册</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="nav-publisher" role="tabpanel" aria-labelledby="nav-publisher-tab">
+                        <form>
+                            <div class="form-group">
+                                <label for="publisher_username">发布者id</label>
+                                <input type="text" class="form-control" id="publisher_username" placeholder="请输入发布者id">
+                            </div>
+                            <div class="form-group">
+                                <label for="publisher_password">密码</label>
+                                <input type="password" class="form-control" id="publisher_password" placeholder="请输入密码">
+                            </div>
+                            <div class="form-group">
+                                <label for="publisher_re_password">确认密码</label>
+                                <input type="password" class="form-control" id="publisher_re_password" placeholder="请再次输入密码">
+                            </div>
+                            <button type="submit" class="btn btn-primary">点击注册</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        // !TODO
+        // 页面逻辑
+    </script>
+{% endblock %}

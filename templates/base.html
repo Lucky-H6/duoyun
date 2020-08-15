@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %}
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <script src="/static/js/util.js"></script>
+    {% block css %}
+    {% endblock %}
+    {% block js %}
+    {% endblock %}
+</head>
+<body>
+{% block head %}
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="/static/img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            多耘
+        </a>
+        <div class="btn-group">
+            {% if login_user %}
+                <button type="button" class="btn btn-light btn-secondary dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                    欢迎 {{ login_user.username }}
+                </button>
+                {% if user_type %}
+                    <!--发布者-->
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button" onclick="jump('/publisher/center/')">发布者中心
+                        </button>
+                        <div class="dropdown-divider"></div>
+                        <button class="dropdown-item" type="button" onclick="jump('/api/logout')">退出登录
+                        </button>
+                    </div>
+                {% else %}
+                    <!--用户-->
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button" onclick="jump('/user/center/')">用户中心
+                        </button>
+                        <div class="dropdown-divider"></div>
+                        <button class="dropdown-item" type="button" onclick="jump('/api/logout/')">退出登录
+                        </button>
+                    </div>
+                {% endif %}
+            {% else %}
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-light" onclick="jump('/login/')">登录
+                    </button>
+                    <button type="button" class="btn btn-light" onclick="jump('/register/')">注册
+                    </button>
+                </div>
+            {% endif %}
+        </div>
+    </nav>
+{% endblock %}
+{% block middle %}
+{% endblock %}
+{% block foot %}
+{% endblock %}
+</body>
+</html>
