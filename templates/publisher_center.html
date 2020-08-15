@@ -24,9 +24,85 @@
                         <!-- !TODO -->
                         我的任务
                     </div>
-                    <div class="tab-pane fade" id="list-post-task" role="tabpanel" aria-labelledby="list-post-task-list">
-                        <!-- !TODO -->
-                        我要发布
+                    <div class="tab-pane fade" id="list-post-task" role="tabpanel"
+                         aria-labelledby="list-post-task-list">
+                        <div class="row">
+                            <h3>&emsp;请选择标注类别</h3>
+                        </div>
+                        <br/>
+                        <div class="card-deck">
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="card col">
+                                    <img src="/static/img/icon.png" class="card-img-top" alt="...">
+                                    <div class="card-body" style="text-align: center">
+                                        <button type="button" class="btn btn-outline-primary">图像标注</button>
+                                    </div>
+                                </div>
+                                <div class="card col">
+                                    <img src="/static/img/icon.png" class="card-img-top" alt="...">
+                                    <div class="card-body" style="text-align: center">
+                                        <button type="button" class="btn btn-outline-primary">语音标注</button>
+                                    </div>
+                                </div>
+                                <div class="card col">
+                                    <img src="/static/img/icon.png" class="card-img-top" alt="...">
+                                    <div class="card-body" style="text-align: center">
+                                        <button type="button" class="btn btn-outline-primary">文字标注</button>
+                                    </div>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <h3>&emsp;请选择标注模式</h3>
+                        </div>
+                        <br/>
+                        <div class="card-deck">
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="card col">
+                                    <img src="/static/img/icon.png" class="card-img-top" alt="...">
+                                    <div class="card-body" style="text-align: center">
+                                        <button type="button" class="btn btn-outline-primary">元素框选</button>
+                                    </div>
+                                </div>
+                                <div class="card col">
+                                    <img src="/static/img/icon.png" class="card-img-top" alt="...">
+                                    <div class="card-body" style="text-align: center">
+                                        <button type="button" class="btn btn-outline-primary">元素描述</button>
+                                    </div>
+                                </div>
+                                <div class="card col">
+                                    <img src="/static/img/icon.png" class="card-img-top" alt="...">
+                                    <div class="card-body" style="text-align: center">
+                                        <button type="button" class="btn btn-outline-primary">手工分类</button>
+                                    </div>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <h3>&emsp;需要专业人员</h3>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="custom-control custom-switch col">
+                                <input type="checkbox" class="custom-control-input" id="professional">
+                                <label class="custom-control-label" for="professional">仅允许通过专业认证的标注人员进行标注</label>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col" style="text-align: right;">
+                                <button type="button" class="btn btn-outline-primary">点击前进</button>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                        <br/><br/>
                     </div>
                 </div>
             </div>

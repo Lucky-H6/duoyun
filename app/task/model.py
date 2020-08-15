@@ -5,7 +5,7 @@ class Task:
         # connect to database and get task message by task_id
 
     @classmethod
-    def creat_task(cls, publisher, task_name, type, mode):
+    def creat_task(cls, publisher, task_name, type, mode, professional):
         pass
         # !TODO
         # connect to database and add a new line of the task
